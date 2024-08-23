@@ -7,7 +7,7 @@ public class TicTacToeGame {
 		        int Player = 1;
 
 		        for (int i = 0; i < 9; i++) {
-		            int row = -1, col = -1;
+		            int row = -1, column = -1;
 		            
 		            do {
 		                System.out.println("\nPlayer " + Player + " TURN!!!"); 
@@ -31,15 +31,15 @@ public class TicTacToeGame {
 		                        System.out.println("Please press the Position(number between 0 and 2) in the columns where you'd wish to place your move!");
 		                        scanner.next();
 		                    }
-		                    col = scanner.nextInt();
-		                    if (col < 0 || col > 2) {
+		                    column = scanner.nextInt();
+		                    if (column < 0 || column > 2) {
 		                        System.out.println("Please press the Position(number between 0 and 2) in the columns where you'd wish to place your move!");
 		                    }
-		                } while (col < 0 || col > 2);
+		                } while (column < 0 || column > 2);
 		                
-		            } while (table[row][col] != '-');
+		            } while (table[row][column] != '-');
 
-		            table[row][col] = Player == 1 ? 'X' : 'O';
+		            table[row][column] = Player == 1 ? 'X' : 'O';
 		            printTable(table);
 		            
 		            System.out.println("PERFECT! Player " + Player + " has made their move"); 
